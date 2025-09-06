@@ -1,0 +1,35 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.apptst"
+    compileSdk = 34  // Upgrade from 33 to 34
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17  // Upgrade from 1_8 to 17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'  // Upgrade from 1_8 to 17
+    }
+
+    defaultConfig {
+        applicationId = "com.example.apptst"
+        minSdk = 21
+        targetSdk = 34  // Upgrade from 33 to 34
+        versionCode = 1
+        versionName = "1.0"
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"
+}
